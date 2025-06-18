@@ -94,6 +94,7 @@ const RevenueDashboard: React.FC = () => {
     dec: 'Dec',
   };
   const [comparisonMetric, setComparisonMetric] = useState<string>('mechRo');
+  const [selectedMechSplit, setSelectedMechSplit] = useState<string>('total');
   const [selectedMonth, setSelectedMonth] = useState<'jan' | 'feb' | 'mar' | 'apr' | 'may' | 'jun' | 'jul' | 'aug' | 'sep' | 'oct' | 'nov' | 'dec'>('jun'); 
   const [selectedYear, setSelectedYear] = useState<number>(2025);
 
@@ -136,6 +137,16 @@ const RevenueDashboard: React.FC = () => {
   });
 
   // State for other charts that previously used 'totals', 'mechData', 'bodyData'
+  const mechSplitOptions = React.useMemo(() => {
+    if (yearOnYearComparisonData && yearOnYearComparisonData.length > 0 && (yearOnYearComparisonData[0] as any).mechRo) {
+      const keys2025 = Object.keys((yearOnYearComparisonData[0].mechRo as any)['2025'] || {});
+      const keys2024 = Object.keys((yearOnYearComparisonData[0].mechRo as any)['2024'] || {});
+      const allKeys = [...new Set([...keys2024, ...keys2025])];
+      return allKeys.length > 0 ? allKeys.sort((a, b) => a === 'total' ? -1 : b === 'total' ? 1 : a.localeCompare(b)) : ['total'];
+    }
+    return ['total'];
+  }, [yearOnYearComparisonData]);
+
   const [chartDataSource, setChartDataSource] = useState({
     throughput: 0,
     labour: 0,
@@ -410,9 +421,9 @@ const RevenueDashboard: React.FC = () => {
 
     switch (comparisonMetric) {
       case 'mechRo':
-        data2024 = monthlyData.mechRo['2024'];
-        data2025 = monthlyData.mechRo['2025'];
-        target = monthlyData.mechRo.target;
+        data2024 = monthlyData.mechRo['2024'][selectedMechSplit] ?? 0;
+        data2025 = monthlyData.mechRo['2025'][selectedMechSplit] ?? 0;
+        target = monthlyData.mechRo.target[selectedMechSplit] ?? 0; // Use split target, fallback to 0
         break;
       case 'bpRo':
         data2024 = monthlyData.bpRo['2024'];
@@ -657,29 +668,46 @@ const RevenueDashboard: React.FC = () => {
             <h2 className="text-lg font-bold bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent">Year-on-Year Comparison</h2>
             <p className="text-sm text-gray-500 mt-1">
               <span className="font-semibold text-primary-600">{comparisonOptions.find(opt => opt.key === comparisonMetric)?.fullLabel}</span>
+              {comparisonMetric === 'mechRo' && <span className="font-semibold text-secondary-600"> ({selectedMechSplit})</span>}
             </p>
           </div>
-          <div className="flex space-x-1 bg-gray-200 p-1 rounded-full">
-            {comparisonOptions.map((option) => (
-              <button
-                key={option.key}
-                onClick={() => setComparisonMetric(option.key)}
-                className={`relative px-3 py-1.5 text-sm font-medium rounded-full focus:outline-none transition-colors duration-300 flex items-center gap-2 ${
-                  comparisonMetric === option.key ? 'text-primary-700' : 'text-gray-600 hover:text-gray-800'
-                }`}
-              >
-                {comparisonMetric === option.key && (
-                  <motion.div
-                    layoutId="comparison-metric-active-pill"
-                    className="absolute inset-0 bg-white rounded-full shadow-md"
-                    style={{ borderRadius: 9999 }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  />
-                )}
-                <span className="relative z-10">{option.icon}</span>
-                <span className="relative z-10">{option.label}</span>
-              </button>
-            ))}
+          <div className="flex items-center gap-2">
+            {comparisonMetric === 'mechRo' && (
+              <motion.div initial={{ opacity: 0, width: 0 }} animate={{ opacity: 1, width: 'auto' }} transition={{ duration: 0.3 }} className="transition-all">
+                <select
+                  aria-label="Select Mechanical Split"
+                  value={selectedMechSplit}
+                  onChange={(e) => setSelectedMechSplit(e.target.value)}
+                  className="w-36 text-xs px-2.5 py-1 bg-white border border-gray-200 shadow-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 text-gray-700 font-medium"
+                >
+                  {mechSplitOptions.map(option => (
+                    <option key={option} value={option}>{option}</option>
+                  ))}
+                </select>
+              </motion.div>
+            )}
+            <div className="flex space-x-1 bg-gray-200 p-1 rounded-full">
+              {comparisonOptions.map((option) => (
+                <button
+                  key={option.key}
+                  onClick={() => setComparisonMetric(option.key)}
+                  className={`relative px-3 py-1.5 text-sm font-medium rounded-full focus:outline-none transition-colors duration-300 flex items-center gap-2 ${ 
+                    comparisonMetric === option.key ? 'text-primary-700' : 'text-gray-600 hover:text-gray-800'
+                  }`}
+                >
+                  {comparisonMetric === option.key && (
+                    <motion.div
+                      layoutId="comparison-metric-active-pill"
+                      className="absolute inset-0 bg-white rounded-full shadow-md"
+                      style={{ borderRadius: 9999 }}
+                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10">{option.icon}</span>
+                  <span className="relative z-10">{option.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
         

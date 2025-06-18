@@ -1,16 +1,40 @@
 export interface MonthlyComparisonData {
   month: string;
-  mechRo: { '2024': number; '2025': number; target: number };
+  mechRo: { 
+    '2024': { [key: string]: number }; 
+    '2025': { [key: string]: number }; 
+    target: { [key: string]: number }; 
+  };
   bpRo: { '2024': number; '2025': number; target: number };
   accessoriesRo: { '2024': number; '2025': number; target: number };
   partsRevenue: { '2024': number; '2025': number; target: number };
   labourRevenue: { '2024': number; '2025': number; target: number };
 }
 
-const raw2025Data: Array<any> = [
+export interface RawData {
+  month: string;
+  mechRo: { [key: string]: number };
+  bpRo: { total: number };
+  mechParts: number;
+  bpParts: number;
+  mechLaborRevenue: number;
+  bpLaborRevenue: number;
+  mechAccessories: number;
+  bpAccessories: number;
+}
+
+export const raw2025Data: RawData[] = [
   {
     "month": "Apr",
     "mechRo": {
+      "General Repair": 221,
+      "Preventive Maintenance-Paid Service(PMS)": 130,
+      "2nd Free Service": 58,
+      "1st Free Service": 52,
+      "3rd Free Service": 52,
+      "Accessory Orders": 23,
+      "4th Free Service": 11,
+      "5th Free Service": 11,
       "total": 558
     },
     "bpRo": {
@@ -26,6 +50,14 @@ const raw2025Data: Array<any> = [
   {
     "month": "Feb",
     "mechRo": {
+      "General Repair": 172,
+      "Preventive Maintenance-Paid Service(PMS)": 141,
+      "1st Free Service": 55,
+      "2nd Free Service": 44,
+      "3rd Free Service": 38,
+      "4th Free Service": 14,
+      "5th Free Service": 9,
+      "Accessory Orders": 7,
       "total": 480
     },
     "bpRo": {
@@ -41,6 +73,14 @@ const raw2025Data: Array<any> = [
   {
     "month": "Jan",
     "mechRo": {
+      "General Repair": 171,
+      "Preventive Maintenance-Paid Service(PMS)": 122,
+      "1st Free Service": 74,
+      "2nd Free Service": 48,
+      "3rd Free Service": 41,
+      "5th Free Service": 15,
+      "4th Free Service": 13,
+      "Accessory Orders": 10,
       "total": 494
     },
     "bpRo": {
@@ -56,6 +96,13 @@ const raw2025Data: Array<any> = [
   {
     "month": "Jun",
     "mechRo": {
+      "General Repair": 127,
+      "Preventive Maintenance-Paid Service(PMS)": 80,
+      "3rd Free Service": 25,
+      "1st Free Service": 23,
+      "2nd Free Service": 22,
+      "5th Free Service": 8,
+      "4th Free Service": 4,
       "total": 289
     },
     "bpRo": {
@@ -71,6 +118,14 @@ const raw2025Data: Array<any> = [
   {
     "month": "Mar",
     "mechRo": {
+      "General Repair": 178,
+      "Preventive Maintenance-Paid Service(PMS)": 147,
+      "2nd Free Service": 57,
+      "1st Free Service": 55,
+      "3rd Free Service": 42,
+      "5th Free Service": 17,
+      "4th Free Service": 13,
+      "Accessory Orders": 7,
       "total": 516
     },
     "bpRo": {
@@ -86,6 +141,14 @@ const raw2025Data: Array<any> = [
   {
     "month": "May",
     "mechRo": {
+      "General Repair": 252,
+      "Preventive Maintenance-Paid Service(PMS)": 147,
+      "2nd Free Service": 64,
+      "1st Free Service": 44,
+      "3rd Free Service": 43,
+      "5th Free Service": 15,
+      "4th Free Service": 13,
+      "Accessory Orders": 6,
       "total": 584
     },
     "bpRo": {
@@ -100,10 +163,18 @@ const raw2025Data: Array<any> = [
   }
 ];
 
-const raw2024Data: Array<any> = [
+export const raw2024Data: RawData[] = [
   {
     "month": "Apr",
     "mechRo": {
+      "General Repair": 168,
+      "Preventive Maintenance-Paid Service(PMS)": 87,
+      "2nd Free Service": 50,
+      "1st Free Service": 39,
+      "3rd Free Service": 39,
+      "5th Free Service": 23,
+      "4th Free Service": 17,
+      "Accessory Orders": 7,
       "total": 430
     },
     "bpRo": {
@@ -119,6 +190,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Aug",
     "mechRo": {
+      "General Repair": 200,
+      "Preventive Maintenance-Paid Service(PMS)": 94,
+      "1st Free Service": 35,
+      "3rd Free Service": 35,
+      "Accessory Orders": 28,
+      "2nd Free Service": 27,
+      "5th Free Service": 25,
+      "4th Free Service": 16,
       "total": 460
     },
     "bpRo": {
@@ -134,6 +213,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Dec",
     "mechRo": {
+      "General Repair": 210,
+      "Preventive Maintenance-Paid Service(PMS)": 120,
+      "1st Free Service": 58,
+      "3rd Free Service": 40,
+      "2nd Free Service": 31,
+      "Accessory Orders": 18,
+      "4th Free Service": 15,
+      "5th Free Service": 15,
       "total": 507
     },
     "bpRo": {
@@ -149,6 +236,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Feb",
     "mechRo": {
+      "General Repair": 179,
+      "Preventive Maintenance-Paid Service(PMS)": 81,
+      "1st Free Service": 50,
+      "3rd Free Service": 42,
+      "2nd Free Service": 38,
+      "5th Free Service": 28,
+      "4th Free Service": 16,
+      "Accessory Orders": 8,
       "total": 442
     },
     "bpRo": {
@@ -164,6 +259,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Jan",
     "mechRo": {
+      "General Repair": 159,
+      "Preventive Maintenance-Paid Service(PMS)": 87,
+      "1st Free Service": 37,
+      "3rd Free Service": 35,
+      "2nd Free Service": 33,
+      "5th Free Service": 17,
+      "4th Free Service": 16,
+      "Accessory Orders": 8,
       "total": 392
     },
     "bpRo": {
@@ -179,6 +282,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Jul",
     "mechRo": {
+      "General Repair": 253,
+      "Preventive Maintenance-Paid Service(PMS)": 88,
+      "3rd Free Service": 43,
+      "2nd Free Service": 42,
+      "Accessory Orders": 31,
+      "1st Free Service": 30,
+      "4th Free Service": 27,
+      "5th Free Service": 19,
       "total": 533
     },
     "bpRo": {
@@ -194,6 +305,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Jun",
     "mechRo": {
+      "General Repair": 276,
+      "Preventive Maintenance-Paid Service(PMS)": 102,
+      "3rd Free Service": 58,
+      "2nd Free Service": 46,
+      "1st Free Service": 43,
+      "4th Free Service": 27,
+      "5th Free Service": 23,
+      "Accessory Orders": 14,
       "total": 589
     },
     "bpRo": {
@@ -209,6 +328,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Mar",
     "mechRo": {
+      "General Repair": 168,
+      "Preventive Maintenance-Paid Service(PMS)": 98,
+      "1st Free Service": 55,
+      "2nd Free Service": 41,
+      "3rd Free Service": 36,
+      "4th Free Service": 22,
+      "5th Free Service": 20,
+      "Accessory Orders": 5,
       "total": 445
     },
     "bpRo": {
@@ -224,6 +351,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "May",
     "mechRo": {
+      "General Repair": 234,
+      "Preventive Maintenance-Paid Service(PMS)": 97,
+      "2nd Free Service": 49,
+      "1st Free Service": 44,
+      "3rd Free Service": 43,
+      "5th Free Service": 21,
+      "4th Free Service": 20,
+      "Accessory Orders": 19,
       "total": 527
     },
     "bpRo": {
@@ -239,6 +374,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Nov",
     "mechRo": {
+      "General Repair": 194,
+      "Preventive Maintenance-Paid Service(PMS)": 105,
+      "2nd Free Service": 45,
+      "1st Free Service": 41,
+      "3rd Free Service": 36,
+      "Accessory Orders": 21,
+      "4th Free Service": 19,
+      "5th Free Service": 13,
       "total": 474
     },
     "bpRo": {
@@ -254,6 +397,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Oct",
     "mechRo": {
+      "General Repair": 209,
+      "Preventive Maintenance-Paid Service(PMS)": 103,
+      "3rd Free Service": 39,
+      "1st Free Service": 32,
+      "Accessory Orders": 30,
+      "2nd Free Service": 25,
+      "4th Free Service": 15,
+      "5th Free Service": 9,
       "total": 462
     },
     "bpRo": {
@@ -269,6 +420,14 @@ const raw2024Data: Array<any> = [
   {
     "month": "Sep",
     "mechRo": {
+      "General Repair": 237,
+      "Preventive Maintenance-Paid Service(PMS)": 100,
+      "3rd Free Service": 46,
+      "1st Free Service": 39,
+      "2nd Free Service": 38,
+      "5th Free Service": 14,
+      "Accessory Orders": 14,
+      "4th Free Service": 13,
       "total": 501
     },
     "bpRo": {
@@ -285,35 +444,47 @@ const raw2024Data: Array<any> = [
 
 const monthOrder = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+const defaultRawData: RawData = {
+    month: '',
+    mechRo: {},
+    bpRo: { total: 0 },
+    mechParts: 0,
+    bpParts: 0,
+    mechLaborRevenue: 0,
+    bpLaborRevenue: 0,
+    mechAccessories: 0,
+    bpAccessories: 0,
+};
+
 export const yearOnYearComparisonData: MonthlyComparisonData[] = monthOrder.map(monthName => {
-  const data2024 = raw2024Data.find(d => d.month === monthName) || {};
-  const data2025 = raw2025Data.find(d => d.month === monthName) || {};
+  const data2024 = raw2024Data.find(d => d.month === monthName) || defaultRawData;
+  const data2025 = raw2025Data.find(d => d.month === monthName) || defaultRawData;
 
   return {
     month: monthName,
     mechRo: {
-      '2024': data2024.mechRo?.total || 0,
-      '2025': data2025.mechRo?.total || 0,
-      target: 0
+      '2024': data2024.mechRo,
+      '2025': data2025.mechRo,
+      target: {}
     },
     bpRo: {
-      '2024': data2024.bpRo?.total || 0,
-      '2025': data2025.bpRo?.total || 0,
+      '2024': data2024.bpRo.total,
+      '2025': data2025.bpRo.total,
       target: 0
     },
     accessoriesRo: {
-      '2024': (data2024.mechAccessories || 0) + (data2024.bpAccessories || 0),
-      '2025': (data2025.mechAccessories || 0) + (data2025.bpAccessories || 0),
+      '2024': data2024.mechAccessories + data2024.bpAccessories,
+      '2025': data2025.mechAccessories + data2025.bpAccessories,
       target: 0
     },
     partsRevenue: {
-      '2024': (data2024.mechParts || 0) + (data2024.bpParts || 0),
-      '2025': (data2025.mechParts || 0) + (data2025.bpParts || 0),
+      '2024': data2024.mechParts + data2024.bpParts,
+      '2025': data2025.mechParts + data2025.bpParts,
       target: 0
     },
     labourRevenue: {
-      '2024': (data2024.mechLaborRevenue || 0) + (data2024.bpLaborRevenue || 0),
-      '2025': (data2025.mechLaborRevenue || 0) + (data2025.bpLaborRevenue || 0),
+      '2024': data2024.mechLaborRevenue + data2024.bpLaborRevenue,
+      '2025': data2025.mechLaborRevenue + data2025.bpLaborRevenue,
       target: 0
     }
   };
