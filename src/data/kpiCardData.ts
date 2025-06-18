@@ -31,92 +31,92 @@ export const raw2025Data: Array<any> = [
   {
     "month": "Apr",
     "mechRo": {
-      "total": 1123
+      "total": 558
     },
     "bpRo": {
-      "total": 175
+      "total": 87
     },
-    "mechParts": 8009736.180000001,
-    "bpParts": 6219482.74,
-    "mechLaborRevenue": 2878102.25,
-    "bpLaborRevenue": 2687707.73,
-    "mechAccessories": 569699.8400000001,
-    "bpAccessories": 45918.770000000004
+    "mechParts": 2587816.05,
+    "bpParts": 2438969.5499999993,
+    "mechLaborRevenue": 1549847.8,
+    "bpLaborRevenue": 1021577.8599999999,
+    "mechAccessories": 348505.7,
+    "bpAccessories": 12934.11
   },
   {
     "month": "Feb",
     "mechRo": {
-      "total": 1124
+      "total": 480
     },
     "bpRo": {
-      "total": 160
+      "total": 50
     },
-    "mechParts": 6841547.65,
-    "bpParts": 6430476.1000000015,
-    "mechLaborRevenue": 3054913.0,
-    "bpLaborRevenue": 2733546.91,
-    "mechAccessories": 631010.05,
-    "bpAccessories": 13392.529999999999
+    "mechParts": 2858268.5599999996,
+    "bpParts": 1943991.3399999999,
+    "mechLaborRevenue": 1603204.0,
+    "bpLaborRevenue": 971372.89,
+    "mechAccessories": 173656.22,
+    "bpAccessories": 18165.569999999996
   },
   {
     "month": "Jan",
     "mechRo": {
-      "total": 1134
+      "total": 494
     },
     "bpRo": {
-      "total": 146
+      "total": 61
     },
-    "mechParts": 8102953.7299999995,
-    "bpParts": 4082508.61,
-    "mechLaborRevenue": 3088027.8099999996,
-    "bpLaborRevenue": 2961587.96,
-    "mechAccessories": 761959.0999999999,
-    "bpAccessories": 16603.51
+    "mechParts": 2472912.9000000004,
+    "bpParts": 3505972.59,
+    "mechLaborRevenue": 1488125.9,
+    "bpLaborRevenue": 1163508.65,
+    "mechAccessories": 133292.83,
+    "bpAccessories": 23337.56
   },
   {
     "month": "Jun",
     "mechRo": {
-      "total": 604
+      "total": 289
     },
     "bpRo": {
-      "total": 59
+      "total": 32
     },
-    "mechParts": 4466286.18,
-    "bpParts": 2635120.19,
-    "mechLaborRevenue": 1549744.48,
-    "bpLaborRevenue": 965801.76,
-    "mechAccessories": 269941.11000000004,
-    "bpAccessories": 9990.0
+    "mechParts": 1680319.62,
+    "bpParts": 935531.8,
+    "mechLaborRevenue": 790191.5700000001,
+    "bpLaborRevenue": 363215.01,
+    "mechAccessories": 140487.43,
+    "bpAccessories": 4066.1
   },
   {
     "month": "Mar",
     "mechRo": {
-      "total": 1020
+      "total": 516
     },
     "bpRo": {
-      "total": 154
+      "total": 73
     },
-    "mechParts": 7869538.930000001,
-    "bpParts": 5390384.0600000005,
-    "mechLaborRevenue": 3172735.37,
-    "bpLaborRevenue": 2644326.4899999998,
-    "mechAccessories": 463970.67,
-    "bpAccessories": 25379.86
+    "mechParts": 2412969.87,
+    "bpParts": 2891084.8800000004,
+    "mechLaborRevenue": 1636608.15,
+    "bpLaborRevenue": 1119457.8399999999,
+    "mechAccessories": 275690.88,
+    "bpAccessories": 21932.95
   },
   {
     "month": "May",
     "mechRo": {
-      "total": 1203
+      "total": 584
     },
     "bpRo": {
-      "total": 170
+      "total": 87
     },
-    "mechParts": 8502135.07,
-    "bpParts": 7943871.79,
-    "mechLaborRevenue": 3069465.7699999996,
-    "bpLaborRevenue": 2613419.36,
-    "mechAccessories": 702321.0,
-    "bpAccessories": 6258.85
+    "mechParts": 3327830.48,
+    "bpParts": 2553134.7399999998,
+    "mechLaborRevenue": 1425921.04,
+    "bpLaborRevenue": 1087876.27,
+    "mechAccessories": 327782.44,
+    "bpAccessories": 26582.259999999995
   }
 ];
 
@@ -124,182 +124,182 @@ export const raw2024Data: Array<any> = [
   {
     "month": "Apr",
     "mechRo": {
-      "total": 1529
+      "total": 430
     },
     "bpRo": {
-      "total": 235
+      "total": 49
     },
-    "mechParts": 9136294.45,
-    "bpParts": 6319660.290000002,
-    "mechLaborRevenue": 3042362.7199999997,
-    "bpLaborRevenue": 3164060.6399999997,
-    "mechAccessories": 345728.97,
-    "bpAccessories": 39095.21000000001
+    "mechParts": 2271616.7800000003,
+    "bpParts": 1413305.11,
+    "mechLaborRevenue": 1194865.39,
+    "bpLaborRevenue": 1069289.0,
+    "mechAccessories": 38356.899999999994,
+    "bpAccessories": 23117.18
   },
   {
     "month": "Aug",
     "mechRo": {
-      "total": 1431
+      "total": 460
     },
     "bpRo": {
-      "total": 221
+      "total": 66
     },
-    "mechParts": 9046775.45,
-    "bpParts": 8243318.430000001,
-    "mechLaborRevenue": 2767793.54,
-    "bpLaborRevenue": 3258581.2,
-    "mechAccessories": 346174.0399999999,
-    "bpAccessories": 13453.970000000001
+    "mechParts": 2864101.9899999998,
+    "bpParts": 1949799.82,
+    "mechLaborRevenue": 1016907.48,
+    "bpLaborRevenue": 796852.5,
+    "mechAccessories": 174555.00999999998,
+    "bpAccessories": 7754.5599999999995
   },
   {
     "month": "Dec",
     "mechRo": {
-      "total": 1301
+      "total": 507
     },
     "bpRo": {
-      "total": 184
+      "total": 59
     },
-    "mechParts": 9061814.96,
-    "bpParts": 7719658.779999999,
-    "mechLaborRevenue": 3934073.8899999997,
-    "bpLaborRevenue": 3159950.6999999997,
-    "mechAccessories": 299253.7899999999,
-    "bpAccessories": 38911.13
+    "mechParts": 3379902.3199999994,
+    "bpParts": 2807664.0600000005,
+    "mechLaborRevenue": 1253933.21,
+    "bpLaborRevenue": 912595.8,
+    "mechAccessories": 81983.76999999999,
+    "bpAccessories": 6315.33
   },
   {
     "month": "Feb",
     "mechRo": {
-      "total": 1313
+      "total": 442
     },
     "bpRo": {
-      "total": 184
+      "total": 54
     },
-    "mechParts": 10561098.49,
-    "bpParts": 5636478.31,
-    "mechLaborRevenue": 3517083.09,
-    "bpLaborRevenue": 3008850.54,
-    "mechAccessories": 427059.69,
-    "bpAccessories": 50496.07
+    "mechParts": 3017794.8699999996,
+    "bpParts": 1526809.66,
+    "mechLaborRevenue": 1154809.7999999998,
+    "bpLaborRevenue": 1103901.0,
+    "mechAccessories": 76408.05,
+    "bpAccessories": 12190.270000000004
   },
   {
     "month": "Jan",
     "mechRo": {
-      "total": 1332
+      "total": 392
     },
     "bpRo": {
-      "total": 188
+      "total": 49
     },
-    "mechParts": 9199120.52,
-    "bpParts": 7446075.890000001,
-    "mechLaborRevenue": 3257269.01,
-    "bpLaborRevenue": 3113276.3899999997,
-    "mechAccessories": 327749.93000000005,
-    "bpAccessories": 32888.89
+    "mechParts": 2224524.15,
+    "bpParts": 2199194.5399999996,
+    "mechLaborRevenue": 1062144.34,
+    "bpLaborRevenue": 1013005.0,
+    "mechAccessories": 64888.71,
+    "bpAccessories": 26790.12
   },
   {
     "month": "Jul",
     "mechRo": {
-      "total": 1654
+      "total": 533
     },
     "bpRo": {
-      "total": 231
+      "total": 64
     },
-    "mechParts": 9303522.28,
-    "bpParts": 6471173.71,
-    "mechLaborRevenue": 3343117.2800000003,
-    "bpLaborRevenue": 3474281.85,
-    "mechAccessories": 449553.36,
-    "bpAccessories": 47747.41
+    "mechParts": 4095511.1599999997,
+    "bpParts": 1883770.4300000002,
+    "mechLaborRevenue": 1164545.66,
+    "bpLaborRevenue": 830451.5,
+    "mechAccessories": 135454.2,
+    "bpAccessories": 17201.39
   },
   {
     "month": "Jun",
     "mechRo": {
-      "total": 1432
+      "total": 589
     },
     "bpRo": {
-      "total": 231
+      "total": 64
     },
-    "mechParts": 8231121.679999999,
-    "bpParts": 5084647.890000001,
-    "mechLaborRevenue": 2347254.9699999997,
-    "bpLaborRevenue": 3055002.26,
-    "mechAccessories": 406104.42,
-    "bpAccessories": 37365.84
+    "mechParts": 3543091.97,
+    "bpParts": 1519547.8500000003,
+    "mechLaborRevenue": 1196272.3599999999,
+    "bpLaborRevenue": 940087.5,
+    "mechAccessories": 74311.85,
+    "bpAccessories": 17389.9
   },
   {
     "month": "Mar",
     "mechRo": {
-      "total": 1365
+      "total": 445
     },
     "bpRo": {
-      "total": 223
+      "total": 43
     },
-    "mechParts": 10365808.909999998,
-    "bpParts": 5715215.76,
-    "mechLaborRevenue": 3506224.06,
-    "bpLaborRevenue": 3626249.17,
-    "mechAccessories": 511253.44000000006,
-    "bpAccessories": 34827.13
+    "mechParts": 2778263.4700000007,
+    "bpParts": 1261876.48,
+    "mechLaborRevenue": 1259095.33,
+    "bpLaborRevenue": 993676.0,
+    "mechAccessories": 38163.71000000001,
+    "bpAccessories": 20490.97
   },
   {
     "month": "May",
     "mechRo": {
-      "total": 1463
+      "total": 527
     },
     "bpRo": {
-      "total": 232
+      "total": 56
     },
-    "mechParts": 9073501.27,
-    "bpParts": 5927629.2,
-    "mechLaborRevenue": 2812102.37,
-    "bpLaborRevenue": 3219729.58,
-    "mechAccessories": 364667.32000000007,
-    "bpAccessories": 37704.87
+    "mechParts": 2951786.5300000003,
+    "bpParts": 1387112.15,
+    "mechLaborRevenue": 1265201.25,
+    "bpLaborRevenue": 859574.5,
+    "mechAccessories": 53564.119999999995,
+    "bpAccessories": 20642.440000000002
   },
   {
     "month": "Nov",
     "mechRo": {
-      "total": 1252
+      "total": 474
     },
     "bpRo": {
-      "total": 172
+      "total": 68
     },
-    "mechParts": 8500568.239999998,
-    "bpParts": 11472235.439999998,
-    "mechLaborRevenue": 3538918.42,
-    "bpLaborRevenue": 4379346.68,
-    "mechAccessories": 310310.43,
-    "bpAccessories": 19382.260000000002
+    "mechParts": 3505507.79,
+    "bpParts": 2332692.9499999997,
+    "mechLaborRevenue": 1204443.0,
+    "bpLaborRevenue": 981015.88,
+    "mechAccessories": 56908.42,
+    "bpAccessories": 9334.369999999997
   },
   {
     "month": "Oct",
     "mechRo": {
-      "total": 1179
+      "total": 462
     },
     "bpRo": {
-      "total": 179
+      "total": 59
     },
-    "mechParts": 9338933.250000002,
-    "bpParts": 10368978.370000003,
-    "mechLaborRevenue": 2706922.04,
-    "bpLaborRevenue": 3034276.0999999996,
-    "mechAccessories": 261162.71999999997,
-    "bpAccessories": 21995.449999999997
+    "mechParts": 2771382.08,
+    "bpParts": 2076923.84,
+    "mechLaborRevenue": 1183431.21,
+    "bpLaborRevenue": 684695.0,
+    "mechAccessories": 84186.68,
+    "bpAccessories": 21812.14
   },
   {
     "month": "Sep",
     "mechRo": {
-      "total": 1370
+      "total": 501
     },
     "bpRo": {
-      "total": 225
+      "total": 62
     },
-    "mechParts": 8908458.51,
-    "bpParts": 8929754.929999998,
-    "mechLaborRevenue": 2833545.4,
-    "bpLaborRevenue": 3026740.75,
-    "mechAccessories": 425494.95,
-    "bpAccessories": 36894.490000000005
+    "mechParts": 2927208.52,
+    "bpParts": 2082696.04,
+    "mechLaborRevenue": 1118983.0,
+    "bpLaborRevenue": 899066.0,
+    "mechAccessories": 184011.26,
+    "bpAccessories": 28696.989999999998
   }
 ];
 
