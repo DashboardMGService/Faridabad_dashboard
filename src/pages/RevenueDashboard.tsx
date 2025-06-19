@@ -552,7 +552,7 @@ const RevenueDashboard: React.FC = () => {
               <Car size={24} className="text-primary-600" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white">Narsinghpur Service Dashboard</h1>
+              <h1 className="text-xl font-bold text-white">Faridabad Service Dashboard</h1>
               <p className="text-xs text-white/80">{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</p>
             </div>
           </div>
